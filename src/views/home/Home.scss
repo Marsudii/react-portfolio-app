@@ -1,0 +1,49 @@
+
+@import '../../styles/variables';
+
+.home-wrapper {
+  .base-title {
+    line-height: 1.6;
+    margin: 3rem 0;
+    letter-spacing: 10px;
+  }
+}
+.name-container {
+  max-width: 450px;
+  width: 100%;
+  .tag-color {
+    font-size: 21px;
+    margin-bottom: 3rem;
+    font-family: $lg;
+    letter-spacing: 1.5px;
+    font-weight: normal;
+  }
+}
+
+// ######## PHOTO DRAWING STYLIZATION
+#app {
+  position: absolute;
+  max-width: 50%;
+  width: 100%;
+  right: 12%;
+  bottom: 0;
+  overflow: hidden
+}
+.drawCanvas {
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-height: 785px;
+  padding-bottom: 80%;
+  position: relative;
+  width: 100%;
+  .illustrationImage {
+    display: none;
+    width: 100%
+  }
+  canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%
+  }
+}
