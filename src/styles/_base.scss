@@ -13,18 +13,21 @@ body {
     min-height: -webkit-fill-available;
   }
 }
-.page-container::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 8px;
+  @include mobile {
+    width: 2px;
+  }
 }
-.page-container::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
   background: $dark;
 }
-.page-container::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
   background: $blue-main;
 }
 .wrapper {
   margin: 0 auto;
-  max-width: 1600px;
+  max-width: 1650px;
   width: 100%;
   padding: 0 4%;
 }
@@ -56,6 +59,10 @@ body {
 .d-flex-c-b {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+}
+.d-flex-b {
+  display: flex;
   justify-content: space-between;
 }
 .d-flex-c {

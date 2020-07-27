@@ -10,8 +10,7 @@ const Home = () => {
   useScripts('js/app-drawing.js');
 
   return (
-    <div className="wrapper home-wrapper">
-      <div className="d-flex">
+    <div className="wrapper home-wrapper d-flex-b">
         <div className="name-container">
           <h1 className="base-title">Alexander Tsiomakh</h1>
           <h2 className="tag-color">
@@ -22,7 +21,6 @@ const Home = () => {
 
         {/*############## CONTENT WITH PHOTO DRAWING ##############*/}
         <div id="app"></div>
-      </div>
     </div>
   );
 }

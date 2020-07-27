@@ -2,6 +2,11 @@
 @import '../../styles/variables';
 
 .home-wrapper {
+  height: calc(100% - 100px);
+  @include tabletSmall {
+    flex-direction: column;
+    height: 100%;
+  }
   .base-title {
     line-height: 1.6;
     margin: 3rem 0;
@@ -22,12 +27,13 @@
 
 // ######## PHOTO DRAWING STYLIZATION
 #app {
-  position: absolute;
-  max-width: 50%;
-  width: 100%;
-  right: 12%;
-  bottom: 0;
-  overflow: hidden
+  width: 60%;
+  overflow: hidden;
+  align-self: flex-end;
+  margin-top: 40px;
+  @include tabletSmall {
+    width: 100%;
+  }
 }
 .drawCanvas {
   background-size: cover;

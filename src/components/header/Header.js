@@ -52,18 +52,20 @@ function Header() {
 					</div>
 					<nav className={`mobile-menu${menuOpen ? ' open' : ''}`}>
 						<div>
-							<ul className="nav">
-								<li className="nav-item">
-									<NavLink className="nav-link" to="/about">About Me</NavLink>
-								</li>
-								<li className="nav-item">
-									<NavLink className="nav-link" to="/projects">Projects</NavLink>
-								</li>
-								<li className="nav-item">
-									<NavLink className="nav-link" to="/gallery">Gallery</NavLink>
-								</li>
-							</ul>
-							<Socials />
+							<div>
+								<ul className="nav">
+									<li className="nav-item">
+										<NavLink className="nav-link" to="/about">About Me</NavLink>
+									</li>
+									<li className="nav-item">
+										<NavLink className="nav-link" to="/projects">Projects</NavLink>
+									</li>
+									<li className="nav-item">
+										<NavLink className="nav-link" to="/gallery">Gallery</NavLink>
+									</li>
+								</ul>
+								<Socials />
+							</div>
 						</div>
 					</nav>
 				</MediaQuery>

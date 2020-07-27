@@ -58,9 +58,12 @@
 // ################## MOBILE MENU
 @include tabletSmall {
   .header.header-overflow ~ .wrapper {
-    height: calc(100vh - 80px - 2rem);
+    height: calc(100vh - 80px);
     overflow: hidden;
     transition: all .3s;
+    @include mobile {
+      height: calc(100vh - 137px);
+    }
   }
   .header {
     height: 80px;
@@ -155,12 +158,14 @@
       opacity: 0;
       visibility: hidden;
       overflow: hidden;
-      @include mobile {
-        height: calc(var(--vh, 1vh) * 100);
-        min-height: -webkit-fill-available;
-      }
       > div {
-        margin-top: 50px;
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 0;
       }
       .nav-item,
       .contact-menu {
@@ -171,9 +176,6 @@
         opacity: 1;
         visibility: visible;
         transform-style: preserve-3d;
-        display: flex;
-        align-items: center;
-        justify-content: center;
         .nav-item,
         .contact-menu {
           transform: scale(1);
@@ -235,3 +237,11 @@
   }
 }
 
+@include mobile {
+  .header{
+    .mobile-menu {
+      height: calc(var(--vh, 1vh) * 100);
+      min-height: -webkit-fill-available;
+    }
+  } 
+}
