@@ -16,37 +16,37 @@ $snow: #ffffff;
 
 // ######### MEDIA QUERY'S
 @mixin fullHD {
-  @media only screen and (max-width: 1920px) {
+  @media screen and (max-width: 1920px) {
     @content;
   }
 }
 @mixin heightTop {
-  @media only screen and (max-height: 900px) {
+  @media screen and (min-width: 769px) and (max-height: 900px) {
     @content;
   }
 }
 @mixin tabletBig {
-  @media only screen and (max-width: 1280px) {
+  @media screen and (max-width: 1280px) {
     @content;
   }
 }
 @mixin tablet {
-  @media only screen and (max-width: 1024px) {
+  @media screen and (max-width: 1024px) {
     @content;
   }
 }
 @mixin tabletSmall {
-  @media only screen and (max-width: 768px) {
+  @media screen and (max-width: 768px) {
     @content;
   }
 }
 @mixin mobile {
-  @media only screen and (max-width: 720px) {
+  @media screen and (max-width: 720px) {
     @content;
   }
 }
 @mixin mobileSmall {
-  @media only screen and (max-width: 359px) {
+  @media screen and (max-width: 359px) {
     @content;
   }
 }

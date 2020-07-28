@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import './Socials.scss';
-
 import GitHubIco from './icons/github.svg';
 import PhoneIco from './icons/phone.svg';
 import TelegaIco from './icons/telegram.svg';
 import CVIco from './icons/cv.svg';
+
+import './Socials.scss';
 
 function Socials() {
   return (
@@ -23,7 +23,7 @@ function Socials() {
         <span className="title">Telegram</span>
         <span className="icon" style={{backgroundImage: `url(${TelegaIco})`}}></span>
       </Link>
-      <Link to={location => ({ ...location, pathname: "https://drive.google.com/file/d/1lCEmFMBFM3PGhhDmvNlRJwByEELoE5Ox/view?usp=sharing" })}target="_blank">
+      <Link to={location => ({ ...location, pathname: "https://drive.google.com/file/d/1ZNQwrTcWmC4nIzD5g9TQvPPZ_N2rOpO3/view?usp=sharing" })}target="_blank">
         <span className="title">CV</span>
         <span className="icon" style={{backgroundImage: `url(${CVIco})`}}></span>
       </Link>
