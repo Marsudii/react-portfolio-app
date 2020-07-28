@@ -15,6 +15,16 @@ $blue-about: #4356ca;
 $snow: #ffffff;
 
 // ######### MEDIA QUERY'S
+@mixin fullHD {
+  @media only screen and (max-width: 1920px) {
+    @content;
+  }
+}
+@mixin heightTop {
+  @media only screen and (max-height: 900px) {
+    @content;
+  }
+}
 @mixin tabletBig {
   @media only screen and (max-width: 1280px) {
     @content;

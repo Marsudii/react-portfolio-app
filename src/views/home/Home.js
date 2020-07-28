@@ -10,7 +10,7 @@ const Home = () => {
   useScripts('js/app-drawing.js');
 
   return (
-    <div className="wrapper home-wrapper d-flex-b">
+    <div className="wrapper home-wrapper d-flex">
         <div className="name-container">
           <h1 className="base-title">Alexander Tsiomakh</h1>
           <h2 className="tag-color">

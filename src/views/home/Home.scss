@@ -16,6 +16,9 @@
 .name-container {
   max-width: 450px;
   width: 100%;
+  @include tabletSmall {
+    max-width: 100%; 
+  }
   .tag-color {
     font-size: 21px;
     margin-bottom: 3rem;
@@ -27,21 +30,35 @@
 
 // ######## PHOTO DRAWING STYLIZATION
 #app {
-  width: 60%;
+  width: 100%;
+  margin: 0 auto;
   overflow: hidden;
   align-self: flex-end;
-  margin-top: 40px;
+  @include fullHD {
+    width: 60%;
+  }
+  @include heightTop {
+    width: 50%;
+  }
   @include tabletSmall {
     width: 100%;
+    padding-top: 40px;
   }
+}
+.photoContainer {
+  width: 100%;
 }
 .drawCanvas {
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: top;
   max-height: 785px;
   padding-bottom: 80%;
   position: relative;
   width: 100%;
+  @include tabletSmall {
+    padding-bottom: 85%;
+  }
   .illustrationImage {
     display: none;
     width: 100%
