@@ -1,2 +1,2 @@
 
-### It's My Portfolio build using REACT
+### My Portfolio project using REACT
