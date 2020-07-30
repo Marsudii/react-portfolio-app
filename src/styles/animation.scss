@@ -46,3 +46,21 @@
     height: 0;
   }
 }
+
+@keyframes bgPosition {
+  0% {
+    background-position-y: top;
+  }
+  6% {
+    background-position-y: top;
+  }
+  50% {
+    background-position-y: 50%;
+  }
+  94% {
+    background-position-y: bottom;
+  }
+  100% {
+    background-position-y: bottom;
+  }
+}

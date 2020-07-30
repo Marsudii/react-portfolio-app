@@ -3,12 +3,14 @@ import GalleryModal from '../../components/GalleryModal';
 
 import './Gallery.scss';
 
-import One from './images/pt.png';
-import Two from './images/we.png';
+import BurningMan from './images/burning-man.jpg';
+import Tesla from './images/tesla-in-space.jpg';
+import Deer from './images/deer.jpg';
 
 const imgUrls = [
-    One,
-    Two
+  BurningMan,
+  Deer,
+  Tesla
 ];
 
 class Interests extends React.Component {
