@@ -61,9 +61,6 @@
   padding-bottom: 80%;
   position: relative;
   width: 100%;
-  @include tabletSmall {
-    padding-bottom: 85%;
-  }
   .illustrationImage {
     display: none;
     width: 100%
