@@ -4,13 +4,18 @@ import GalleryModal from '../../components/GalleryModal';
 import './Gallery.scss';
 
 import BurningMan from './images/burning-man.jpg';
-import Tesla from './images/tesla-in-space.jpg';
 import Deer from './images/deer.jpg';
+import Tesla from './images/tesla-in-space.jpg';
+import RedView from './images/red-view.jpg';
+import Sky from './images/sky.jpg';
 
 const imgUrls = [
   BurningMan,
-  Deer,
-  Tesla
+  RedView,
+  Tesla,
+  Sky,
+  Deer
+
 ];
 
 class Interests extends React.Component {
@@ -64,7 +69,7 @@ class Interests extends React.Component {
           <div className="gallery-grid">
             {imgUrls.map(this.renderImageContent)}
           </div>
-          <GalleryModal 
+          <GalleryModal
             closeModal={this.closeModal} 
             findPrev={this.findPrev} 
             findNext={this.findNext} 
