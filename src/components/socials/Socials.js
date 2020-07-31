@@ -23,7 +23,7 @@ function Socials() {
         <span className="title">Telegram</span>
         <span className="icon" style={{backgroundImage: `url(${TelegaIco})`}}></span>
       </Link>
-      <Link to={location => ({ ...location, pathname: "https://drive.google.com/file/d/1ZNQwrTcWmC4nIzD5g9TQvPPZ_N2rOpO3/view?usp=sharing" })} target="_blank">
+      <Link to={location => ({ ...location, pathname: "https://drive.google.com/file/d/1ELwcfNzDJKKBbvjPhcQL-cZdfQcnCeaA/view?usp=sharing" })} target="_blank">
         <span className="title">CV</span>
         <span className="icon" style={{backgroundImage: `url(${CVIco})`}}></span>
       </Link>
