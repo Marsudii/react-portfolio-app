@@ -3,17 +3,17 @@ import { Link } from 'react-router-dom';
 
 import './Projects.scss';
 
-import BgNakashima from './images/nakashima-screen.png';
-import BgSprey from './images/spreybox.png';
-import BgFoundation from './images/tse-foundation.png';
-import BgArchitect from './images/architect.png';
-import BgBottleService from './images/bottle-service.png';
-import BgDrinkHaus from './images/drink-haus.png';
-import bgInfiniteFood from './images/infinite-food.png';
-import bgMensch from './images/mensch.png';
-import bgMeNotebooks from './images/notebooks.png';
-import bgPalms from './images/rooms.png';
-import bgEnde from './images/ende.png';
+import BgNakashima from './images/nakashima-screen.jpg';
+import BgSprey from './images/spreybox.jpg';
+import BgFoundation from './images/tse-foundation.jpg';
+import BgArchitect from './images/architect.jpg';
+import BgBottleService from './images/bottle-service.jpg';
+import BgDrinkHaus from './images/drink-haus.jpg';
+import bgInfiniteFood from './images/infinite-food.jpg';
+import bgMensch from './images/mensch.jpg';
+import bgMeNotebooks from './images/notebooks.jpg';
+import bgPalms from './images/rooms.jpg';
+import bgEnde from './images/ende.jpg';
 
 class Projects extends React.Component {
 

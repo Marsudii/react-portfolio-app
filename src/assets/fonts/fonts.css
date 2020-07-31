@@ -9,21 +9,6 @@
       url('SegoeUI.svg#SegoeUI') format('svg');
   font-weight: normal;
   font-style: normal;
-  
-}
-
-@font-face {
-  font-family: 'Segoe UI Medium';
-  src: url('SegoeUI-SemiBold.eot');
-  src: local('Segoe UI Semibold'), local('SegoeUI-SemiBold'),
-      url('SegoeUI-SemiBold.eot?#iefix') format('embedded-opentype'),
-      url('SegoeUI-SemiBold.woff2') format('woff2'),
-      url('SegoeUI-SemiBold.woff') format('woff'),
-      url('SegoeUI-SemiBold.ttf') format('truetype'),
-      url('SegoeUI-SemiBold.svg#SegoeUI-SemiBold') format('svg');
-  font-weight: 600;
-  font-style: normal;
-  
 }
 @font-face {
   font-family: 'Louis George Caf';
