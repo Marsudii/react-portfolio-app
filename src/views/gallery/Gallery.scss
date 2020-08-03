@@ -1,187 +1,187 @@
 @import '../../styles/variables.scss';
 
 .gallery-subtitle {
-  margin-bottom: 2rem;
+	margin-bottom: 2rem;
 }
 
 .gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 2px;
-  @include tabletBig {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  @include tablet {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  @include mobile {
-    grid-template-columns: repeat(1, 1fr);
-  }
-  > div {
-    position: relative;
-    cursor: pointer;
-    display: flex;
-    height: 250px;
-    &::before, 
-    &::after {
-      content: "";
-      position: absolute;
-      display: block;
-      transition: all .3s;
-      opacity: 0;
-    }
-    &:before {
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: #000000;
-    }
-    &:after {
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%) scale(0);
-      opacity: 1;
-      background: url('./images/zoom.svg') no-repeat center / contain;
-      width: 70px;
-      height: 70px;
-    }
-    &:hover::before{
-      opacity: .8;
-    }
-    &:hover::after {
-      transform: translate(-50%, -50%) scale(1);
-    }
-  }
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 2px;
+	@include tabletBig {
+		grid-template-columns: repeat(3, 1fr);
+	}
+	@include tablet {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	@include mobile {
+		grid-template-columns: repeat(1, 1fr);
+	}
+	> div {
+		position: relative;
+		cursor: pointer;
+		display: flex;
+		height: 250px;
+		&::before, 
+		&::after {
+			content: "";
+			position: absolute;
+			display: block;
+			transition: all .3s;
+			opacity: 0;
+		}
+		&:before {
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: #000000;
+		}
+		&:after {
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%) scale(0);
+			opacity: 1;
+			background: url('./images/zoom.svg') no-repeat center / contain;
+			width: 70px;
+			height: 70px;
+		}
+		&:hover::before{
+			opacity: .8;
+		}
+		&:hover::after {
+			transform: translate(-50%, -50%) scale(1);
+		}
+	}
 }
 
 .gallery-img {
-  object-fit: cover;
+	object-fit: cover;
 }
 
 .modal-overlay {
-  position: fixed;
-  z-index: 100;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0, 0, 0, .8);
-  top: 0;
-  left: 0;
+	position: fixed;
+	z-index: 100;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, .8);
+	top: 0;
+	left: 0;
 }
 
 .modal {
-  position: fixed;
-  z-index: 101;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  padding: 50px 70px;
-  overflow: hidden;
-  overflow-y: auto;
-  display: grid;
-  @include tabletSmall {
-    padding: 45px 30px 30px;
-  }
+	position: fixed;
+	z-index: 101;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	padding: 50px 70px;
+	overflow: hidden;
+	overflow-y: auto;
+	display: grid;
+	@include tabletSmall {
+		padding: 45px 30px 30px;
+	}
 }
 
 .modal-body {
-  position: relative;
-  max-width: 900px;
-  width: 100%;
-  margin: 0 auto 40px;
-  display: flex;
-  align-self: center;
-  span {
-    position: absolute;
-    display: block;
-    background: #fff;
-    border-radius: 5px;
-    height: 40px;
-    width: 40px;
-    text-align: center;
-    background: #252525;
-    cursor: pointer;
-    &:hover {
-      background: #202020;
-    }
-  }
-  .modal-prev,
-  .modal-next {
-    right: -40px;
-    border-radius: 0 10px 10px 0;
-    height: 100%;
-    width: 40px;
-    @include tabletSmall {
-      width: 30px;
-      right: -30px;
-    }
-    &::after {
-      content: '';
-      display: block;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-79%, -50%) rotate(-45deg);
-      width: 30px;
-      height: 30px;
-      border: 2px #4356ca solid;
-      border-width: 0 2px 2px 0;
-    }
-  }
-  .modal-prev {
-    left: -40px;
-    right: auto;
-    border-radius: 10px 0 0 10px;
-    @include tabletSmall {
-      left: -30px;
-    }
-    &::after {
-      transform: translate(-21%, -50%) rotate(135deg);
-    }
-  }
-  .modal-close {
-    right: -70px;
-    top: -30px;
-    background: none;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    border: 2px #fff solid;
-    @include tabletSmall {
-      right: 50%;
-      top: -42px;
-      width: 40px;
-      height: 40px;
-      transform: translateX(50%);
-    }
-    &::after,
-    &::before {
-      content: '';
-      display: block;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%) rotate(-45deg);
-      width: 2px;
-      height: 15px;
-      background: #fff;
-      transition: all .3s;
-    }
-    &::after {
-      transform: translate(-50%, -50%) rotate(45deg);
-    }
-    &:hover {
-      background: none;
-      &::after,
-      &::before {
-        transform: translate(-50%, -50%) rotate(-45deg) scale(1.3);
-      }
-    }
-    &:hover {
-      &::after {
-        transform: translate(-50%, -50%) rotate(45deg) scale(1.3);
-      }
-    }
-  }
+	position: relative;
+	max-width: 900px;
+	width: 100%;
+	margin: 0 auto 40px;
+	display: flex;
+	align-self: center;
+	span {
+		position: absolute;
+		display: block;
+		background: #fff;
+		border-radius: 5px;
+		height: 40px;
+		width: 40px;
+		text-align: center;
+		background: #252525;
+		cursor: pointer;
+		&:hover {
+			background: #202020;
+		}
+	}
+	.modal-prev,
+	.modal-next {
+		right: -40px;
+		border-radius: 0 10px 10px 0;
+		height: 100%;
+		width: 40px;
+		@include tabletSmall {
+			width: 30px;
+			right: -30px;
+		}
+		&::after {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-79%, -50%) rotate(-45deg);
+			width: 30px;
+			height: 30px;
+			border: 2px #4356ca solid;
+			border-width: 0 2px 2px 0;
+		}
+	}
+	.modal-prev {
+		left: -40px;
+		right: auto;
+		border-radius: 10px 0 0 10px;
+		@include tabletSmall {
+			left: -30px;
+		}
+		&::after {
+			transform: translate(-21%, -50%) rotate(135deg);
+		}
+	}
+	.modal-close {
+		right: -70px;
+		top: -30px;
+		background: none;
+		width: 30px;
+		height: 30px;
+		border-radius: 50%;
+		border: 2px #fff solid;
+		@include tabletSmall {
+			right: 50%;
+			top: -42px;
+			width: 40px;
+			height: 40px;
+			transform: translateX(50%);
+		}
+		&::after,
+		&::before {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%) rotate(-45deg);
+			width: 2px;
+			height: 15px;
+			background: #fff;
+			transition: all .3s;
+		}
+		&::after {
+			transform: translate(-50%, -50%) rotate(45deg);
+		}
+		&:hover {
+			background: none;
+			&::after,
+			&::before {
+				transform: translate(-50%, -50%) rotate(-45deg) scale(1.3);
+			}
+		}
+		&:hover {
+			&::after {
+				transform: translate(-50%, -50%) rotate(45deg) scale(1.3);
+			}
+		}
+	}
 }

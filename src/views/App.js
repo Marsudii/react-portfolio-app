@@ -11,29 +11,29 @@ import Gallery from './gallery/Gallery';
 import './App.scss';
 
 const MainPage = () => {
-  return (
-    <Route render={({location}) => (
-      <TransitionGroup>
-        <CSSTransition 
-          key={location.key}
-          classNames="slide"
-          timeout={1700}
-        >
-          <div id="page" className="page">
-            <div className="page-container">
-              <Header />
-              <Switch location={location}>
-                <Route exact path="/" component={Home} />
-                <Route path="/about" component={About} />
-                <Route path="/projects" component={Projects} />
-                <Route path="/gallery" component={Gallery} />
-              </Switch>
-            </div>
-          </div>
-        </CSSTransition>
-      </TransitionGroup>
-    )} />
-  );
+	return (
+		<Route render={({location}) => (
+			<TransitionGroup>
+				<CSSTransition 
+					key={location.key}
+					classNames="slide"
+					timeout={1700}
+				>
+					<div id="page" className="page">
+						<div className="page-container">
+							<Header />
+							<Switch location={location}>
+								<Route exact path="/" component={Home} />
+								<Route path="/about" component={About} />
+								<Route path="/projects" component={Projects} />
+								<Route path="/gallery" component={Gallery} />
+							</Switch>
+						</div>
+					</div>
+				</CSSTransition>
+			</TransitionGroup>
+		)} />
+	);
 }
 
 export default MainPage;

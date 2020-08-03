@@ -1,64 +1,60 @@
 @font-face {
-  font-family: 'Segoe UI';
-  src: url('SegoeUI.eot');
-  src: local('Segoe UI'), local('SegoeUI'),
-      url('SegoeUI.eot?#iefix') format('embedded-opentype'),
-      url('SegoeUI.woff2') format('woff2'),
-      url('SegoeUI.woff') format('woff'),
-      url('SegoeUI.ttf') format('truetype'),
-      url('SegoeUI.svg#SegoeUI') format('svg');
-  font-weight: normal;
-  font-style: normal;
+	font-family: 'Segoe UI';
+	src: url('SegoeUI.eot');
+	src: local('Segoe UI'), local('SegoeUI'),
+		url('SegoeUI.eot?#iefix') format('embedded-opentype'),
+		url('SegoeUI.woff2') format('woff2'),
+		url('SegoeUI.woff') format('woff'),
+		url('SegoeUI.ttf') format('truetype'),
+		url('SegoeUI.svg#SegoeUI') format('svg');
+	font-weight: normal;
+	font-style: normal;
 }
 @font-face {
-  font-family: 'Louis George Caf';
-  src: url('LouisGeorgeCafe.eot');
-  src: local('Louis George Caf'), local('LouisGeorgeCafe'),
-      url('LouisGeorgeCafe.eot?#iefix') format('embedded-opentype'),
-      url('LouisGeorgeCafe.woff2') format('woff2'),
-      url('LouisGeorgeCafe.woff') format('woff'),
-      url('LouisGeorgeCafe.ttf') format('truetype'),
-      url('LouisGeorgeCafe.svg#LouisGeorgeCafe') format('svg');
-  font-weight: normal;
-  font-style: normal;
-  
+	font-family: 'Louis George Caf';
+	src: url('LouisGeorgeCafe.eot');
+	src: local('Louis George Caf'), local('LouisGeorgeCafe'),
+		url('LouisGeorgeCafe.eot?#iefix') format('embedded-opentype'),
+		url('LouisGeorgeCafe.woff2') format('woff2'),
+		url('LouisGeorgeCafe.woff') format('woff'),
+		url('LouisGeorgeCafe.ttf') format('truetype'),
+		url('LouisGeorgeCafe.svg#LouisGeorgeCafe') format('svg');
+	font-weight: normal;
+	font-style: normal;
 }
 @font-face {
-  font-family: 'Louis George Caf Bold';
-  src: url('LouisGeorgeCafe-Bold.eot');
-  src: local('Louis George Caf Bold'), local('LouisGeorgeCafe-Bold'),
-      url('LouisGeorgeCafe-Bold.eot?#iefix') format('embedded-opentype'),
-      url('LouisGeorgeCafe-Bold.woff2') format('woff2'),
-      url('LouisGeorgeCafe-Bold.woff') format('woff'),
-      url('LouisGeorgeCafe-Bold.ttf') format('truetype'),
-      url('LouisGeorgeCafe-Bold.svg#LouisGeorgeCafe-Bold') format('svg');
-  font-weight: bold;
-  font-style: normal;
-  
+	font-family: 'Louis George Caf Bold';
+	src: url('LouisGeorgeCafe-Bold.eot');
+	src: local('Louis George Caf Bold'), local('LouisGeorgeCafe-Bold'),
+		url('LouisGeorgeCafe-Bold.eot?#iefix') format('embedded-opentype'),
+		url('LouisGeorgeCafe-Bold.woff2') format('woff2'),
+		url('LouisGeorgeCafe-Bold.woff') format('woff'),
+		url('LouisGeorgeCafe-Bold.ttf') format('truetype'),
+		url('LouisGeorgeCafe-Bold.svg#LouisGeorgeCafe-Bold') format('svg');
+	font-weight: bold;
+	font-style: normal;
 }
 @font-face {
-  font-family: 'Coming Soon';
-  src: url('ComingSoon-Regular.eot');
-  src: local('Coming Soon Regular'), local('ComingSoon-Regular'),
-      url('./ComingSoon-Regular.eot?#iefix') format('embedded-opentype'),
-      url('./ComingSoon-Regular.woff2') format('woff2'),
-      url('./ComingSoon-Regular.woff') format('woff'),
-      url('./ComingSoon-Regular.ttf') format('truetype'),
-      url('./ComingSoon-Regular.svg#ComingSoon-Regular') format('svg');
-  font-weight: normal;
-  font-style: normal;
-  
+	font-family: 'Coming Soon';
+	src: url('ComingSoon-Regular.eot');
+	src: local('Coming Soon Regular'), local('ComingSoon-Regular'),
+		url('./ComingSoon-Regular.eot?#iefix') format('embedded-opentype'),
+		url('./ComingSoon-Regular.woff2') format('woff2'),
+		url('./ComingSoon-Regular.woff') format('woff'),
+		url('./ComingSoon-Regular.ttf') format('truetype'),
+		url('./ComingSoon-Regular.svg#ComingSoon-Regular') format('svg');
+	font-weight: normal;
+	font-style: normal;
 }
 @font-face {
-  font-family: 'Indie Flower';
-  src: url('IndieFlower.eot');
-  src: local('Indie Flower'), local('IndieFlower'),
-      url('IndieFlower.eot?#iefix') format('embedded-opentype'),
-      url('IndieFlower.woff2') format('woff2'),
-      url('IndieFlower.woff') format('woff'),
-      url('IndieFlower.ttf') format('truetype'),
-      url('IndieFlower.svg#IndieFlower') format('svg');
-  font-weight: normal;
-  font-style: normal;
-  
+	font-family: 'Indie Flower';
+	src: url('IndieFlower.eot');
+	src: local('Indie Flower'), local('IndieFlower'),
+		url('IndieFlower.eot?#iefix') format('embedded-opentype'),
+		url('IndieFlower.woff2') format('woff2'),
+		url('IndieFlower.woff') format('woff'),
+		url('IndieFlower.ttf') format('truetype'),
+		url('IndieFlower.svg#IndieFlower') format('svg');
+	font-weight: normal;
+	font-style: normal;
 }
