@@ -8,14 +8,19 @@ import Deer from './images/deer.jpg';
 import Tesla from './images/tesla-in-space.jpg';
 import RedView from './images/red-view.jpg';
 import Sky from './images/sky.jpg';
+import Glass from './images/glass-of-truth.png';
+import Salamandra from './images/salamandra.jpg';
+import LazyGlory from './images/lazy.jpg';
 
 const imgUrls = [
   BurningMan,
   RedView,
   Tesla,
   Sky,
-  Deer
-
+  Deer,
+  LazyGlory,
+  Salamandra,
+  Glass,
 ];
 
 class Interests extends React.Component {
