@@ -16,30 +16,23 @@
 			margin-right: 0;
 		}
 	}
-	.icon {
-		display: block;
-		width: 25px;
-		height: 25px;
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: contain;
-	}
 	.title {
 		position: absolute;
-		top: -18px;
+		top: -20px;
 		left: 50%;
 		color: $blue-main;
-		transform: translateX(-60%) rotate(-12deg);
+		transform: translateX(-60%) rotate(-10deg);
 		font-size: 1rem;
 		letter-spacing: 3px;
 		opacity: 0;
-		transition: all .3s ease;
+		transition: all .4s ease;
 		margin-left: 5%;
 		font-family: $indie;
+		font-weight: normal;
 	}
 	a:hover > .title {
 		opacity: 1;
 		transform-origin: center;
-		transform: translateX(-47%) rotate(12deg);
+		transform: translateX(-47%) rotate(15deg);
 	}
 }
