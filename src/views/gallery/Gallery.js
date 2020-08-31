@@ -9,17 +9,19 @@ import Tesla from './images/tesla-in-space.jpg';
 import RedView from './images/red-view.jpg';
 import Sky from './images/sky.jpg';
 import Glass from './images/glass-of-truth.png';
-import Salamandra from './images/salamandra.jpg';
 import LazyGlory from './images/lazy.jpg';
+import BlueCave from './images/blue-cave.jpg';
+import GreenWater from './images/green-water.jpg';
 
 const imgUrls = [
 	BurningMan,
 	RedView,
 	Tesla,
 	Sky,
-	Deer,
+	GreenWater,
+	BlueCave,
 	LazyGlory,
-	Salamandra,
+	Deer,
 	Glass,
 ];
 class Interests extends React.Component {
