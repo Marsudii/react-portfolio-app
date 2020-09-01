@@ -21,12 +21,15 @@
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  display: block;
+  width: 20px;
+  height: 20px;
 }
 .icon-cv:before {
   content: "\e900";
   color: #fff;
 }
-.icon-github:before {
+.icon-octopus:before {
   content: "\e901";
   color: #fff;
 }
@@ -34,7 +37,7 @@
   content: "\e902";
   color: #fff;
 }
-.icon-telegram:before {
+.icon-plane:before {
   content: "\e903";
   color: #fff;
 }

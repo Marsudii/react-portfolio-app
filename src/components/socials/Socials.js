@@ -8,7 +8,7 @@ function Socials() {
 		<div className="contact-menu d-flex-c">
 			<Link to={location => ({ ...location, pathname: "https://github.com/buhowski" })} target="_blank">
 				<span className="title">GitHub</span>
-				<span className="icon-github"></span>
+				<span className="icon-octopus"></span>
 			</Link>
 			<a href="tel:+380993129768">
 				<span className="title">Call</span>
@@ -16,7 +16,7 @@ function Socials() {
 			</a>
 			<Link to={location => ({ ...location, pathname: "https://t.me/buhowski" })} target="_blank">
 				<span className="title">Telegram</span>
-				<span className="icon-telegram"></span>
+				<span className="icon-plane"></span>
 			</Link>
 			<Link to={location => ({ ...location, pathname: "https://drive.google.com/file/d/1Q15mgFV3ZLaNCjAWv8tbeXNkQKr3UyIb/view?usp=sharing" })} target="_blank">
 				<span className="title">CV</span>

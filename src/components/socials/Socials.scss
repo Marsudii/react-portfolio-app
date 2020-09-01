@@ -21,7 +21,7 @@
 		top: -20px;
 		left: 50%;
 		color: $blue-main;
-		transform: translateX(-60%) rotate(-10deg);
+		transform: translateX(-60%) rotate(-5deg);
 		font-size: 1rem;
 		letter-spacing: 3px;
 		opacity: 0;
@@ -33,6 +33,6 @@
 	a:hover > .title {
 		opacity: 1;
 		transform-origin: center;
-		transform: translateX(-47%) rotate(15deg);
+		transform: translateX(-47%) rotate(10deg);
 	}
 }
