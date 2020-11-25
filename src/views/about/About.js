@@ -24,7 +24,7 @@ class About extends React.Component {
 	render() {
 		const aboutElements = dotsData.map((item) => {
 			return (
-				<div className={`about-item ${item.classItem}`} key={item.id}>
+				<div className={`about-item ${item.classItem}`} key={item.keyId}>
 					<div 
 						id={item.classItem} 
 						onMouseOver={this.addActiveClass}

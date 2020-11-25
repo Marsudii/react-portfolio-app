@@ -1,87 +1,64 @@
 import React from "react";
 import GalleryModal from '../../components/GalleryModal';
-
+import galleryData from './galleryData';
 import './Gallery.scss';
 
-import BurningMan from './images/burning-man.jpg';
-import Deer from './images/deer.jpg';
-import Tesla from './images/tesla-in-space.jpg';
-import RedView from './images/red-view.jpg';
-import Sky from './images/sky.jpg';
-import Glass from './images/glass-of-truth.jpg';
-import LazyGlory from './images/lazy.jpg';
-import BlueCave from './images/blue-cave.jpg';
-import GreenWater from './images/green-water.jpg';
-
-const imgUrls = [
-	BurningMan,
-	RedView,
-	Tesla,
-	Sky,
-	GreenWater,
-	BlueCave,
-	LazyGlory,
-	Deer,
-	Glass,
-];
 class Interests extends React.Component {
+	state = {
+		currentIndex: null
+	}
 
-	constructor(props) {
-		super(props);
-		this.state = { currentIndex: null };
-		this.closeModal = this.closeModal.bind(this);
-		this.findNext = this.findNext.bind(this);
-		this.findPrev = this.findPrev.bind(this);
-		this.renderImageContent = this.renderImageContent.bind(this);
+	openModal = (e, index) => {
+		this.setState ({
+			currentIndex: index
+		});
 	}
-	renderImageContent(src, index) {
-		return (
-			<div onClick={(e) => this.openModal(e, index)}>
-				<img className="gallery-img" src={src} key={src} alt="what did tou see?"/>
-			</div>
-		) 
+
+	closeModal = () => {
+		this.setState ({
+			currentIndex: null
+		});
 	}
-	openModal(e, index) {
-		this.setState ({ currentIndex: index });
-	}
-	closeModal(e) {
-		if (e !== undefined) {
-			e.preventDefault();
-		}
-		this.setState ({ currentIndex: null });
-	}
-	findPrev(e) {
-		if (e !== undefined) {
-			e.preventDefault();
-		}
-		this.setState(prevState => ({
-			currentIndex: prevState.currentIndex -1
+
+	findPrev = () => {
+		this.setState(state => ({
+			currentIndex: state.currentIndex - 1
 		}));
 	}
-	findNext(e) {
-		if (e !== undefined) {
-			e.preventDefault();
-		}
-		this.setState(prevState => ({
-			currentIndex: prevState.currentIndex + 1
+	
+	findNext = () => {
+		this.setState(state => ({
+			currentIndex: state.currentIndex + 1
 		}));
 	}
+
 	render() {
+		const {currentIndex} = this.state;
+		const bigImg = galleryData.map(item => item.bigImg);
+		const bigImgAlt = galleryData.map(item => item.bigImgAlt);
+
 		return (
 			<div className="wrapper wrapper-container">
 				<h1 className="base-title">Images</h1>
 				<h2 className="gallery-subtitle">For inspiration and just for fun</h2>
 				<div className="gallery-container">
 					<div className="gallery-grid">
-						{imgUrls.map(this.renderImageContent)}
+						{galleryData.map((item, index) => {
+							return (
+								<div onClick={(e) => this.openModal(e, index)} key={item.keyId}>
+									<img className="gallery-img" src={item.img} alt={item.imgAlt} />
+								</div>
+							)
+						})}
 					</div>
 					<GalleryModal
-						closeModal={this.closeModal} 
-						findPrev={this.findPrev} 
-						findNext={this.findNext} 
-						hasPrev={this.state.currentIndex > 0} 
-						hasNext={this.state.currentIndex + 1 < imgUrls.length} 
-						src={imgUrls[this.state.currentIndex]} 
+						closeModal={this.closeModal}
+						findPrev={this.findPrev}
+						findNext={this.findNext}
+						hasPrev={currentIndex > 0}
+						hasNext={currentIndex + 1 < bigImg.length}
+						source={bigImg[currentIndex]}
+						bigImgAlt={bigImgAlt[currentIndex]}
 					/>
 				</div>
 			</div>
