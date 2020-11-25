@@ -23,64 +23,55 @@ const galleryData = [
 		img: BurningMan,
 		imgAlt: 'burning man',
 		bigImg: BurningManBig,
-		bigImgAlt: 'burning man big',
-		keyId: 1
+		bigImgAlt: 'burning man big'
 	},
 	{
 		img: RedView,
 		imgAlt: 'red view',
 		bigImg: RedViewBig,
-		bigImgAlt: 'red view big',
-		keyId: 2
+		bigImgAlt: 'red view big'
 	},
 	{
 		img: Tesla,
 		imgAlt: 'tesla',
 		bigImg: TeslaBig,
-		bigImgAlt: 'tesla big',
-		keyId: 3
+		bigImgAlt: 'tesla big'
 	},
 	{
 		img: Sky,
 		imgAlt: 'sky',
 		bigImg: SkyBig,
-		bigImgAlt: 'sky big',
-		keyId: 4
+		bigImgAlt: 'sky big'
 	},
 	{
 		img: GreenWater,
 		imgAlt: 'green water',
 		bigImg: GreenWaterBig,
-		bigImgAlt: 'green water big',
-		keyId: 5
+		bigImgAlt: 'green water big'
 	},
 	{
 		img: BlueCave,
 		imgAlt: 'Blue Cave',
 		bigImg: BlueCaveBig,
-		bigImgAlt: 'Blue Cave big',
-		keyId: 6
+		bigImgAlt: 'Blue Cave big'
 	},
 	{
 		img: LazyGlory,
 		imgAlt: 'Lazy Glory',
 		bigImg: LazyGloryBig,
-		bigImgAlt: 'Lazy Glory big',
-		keyId: 7
+		bigImgAlt: 'Lazy Glory big'
 	},
 	{
 		img: Deer,
 		imgAlt: 'Deer',
 		bigImg: DeerBig,
-		bigImgAlt: 'Deer big',
-		keyId: 8
+		bigImgAlt: 'Deer big'
 	},
 	{
 		img: Glass,
 		imgAlt: 'Glass',
 		bigImg: GlassBig,
-		bigImgAlt: 'Glass big',
-		keyId: 9
+		bigImgAlt: 'Glass big'
 	}
 ]
 

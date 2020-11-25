@@ -1,39 +1,60 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
-
+import {Route, BrowserRouter, Switch} from 'react-router-dom';
+import {TransitionGroup, CSSTransition} from 'react-transition-group';
+import './App.scss';
 import Header from '../components/header/Header';
+
 import Home from './home/Home';
 import Projects from './projects/Projects';
 import About from './about/About';
 import Gallery from './gallery/Gallery';
 
-import './App.scss';
+const routesData = [
+	{
+		pathTo: '',
+		pageComponent: Home
+	},
+	{
+		pathTo: 'about',
+		pageComponent: Projects
+	},
+	{
+		pathTo: 'projects',
+		pageComponent: About
+	},
+	{
+		pathTo: 'gallery',
+		pageComponent: Gallery
+	},
+];
 
-const MainPage = () => {
+const App = () => {
 	return (
-		<Route render={({location}) => (
-			<TransitionGroup>
-				<CSSTransition 
-					key={location.key}
-					classNames="slide"
-					timeout={1700}
-				>
-					<div id="page" className="page">
-						<div className="page-container">
-							<Header />
-							<Switch location={location}>
-								<Route exact path="/" component={Home} />
-								<Route exact path="/about" component={About} />
-								<Route exact path="/projects" component={Projects} />
-								<Route exact path="/gallery" component={Gallery} />
-							</Switch>
+		<BrowserRouter>
+			<Route render={({location}) => (
+				<TransitionGroup>
+					<CSSTransition 
+						key={location.key}
+						classNames="slide"
+						timeout={1700}
+					>
+						<div id="page" className="page">
+							<div className="page-container">
+								<Header />
+								<Switch location={location}>
+									{routesData.map(({pathTo, pageComponent}, i) => {
+										return (
+											<Route exact path={`/${pathTo}`} component={pageComponent} key={i}/>
+										)
+									})}
+								</Switch>
+							</div>
 						</div>
-					</div>
-				</CSSTransition>
-			</TransitionGroup>
-		)} />
+					</CSSTransition>
+				</TransitionGroup>
+			)}/>
+		</BrowserRouter>
 	);
 }
 
-export default MainPage;
+export default App;

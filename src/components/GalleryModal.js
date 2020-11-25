@@ -1,14 +1,6 @@
 import React from "react";
 
 class GalleryModal extends React.Component {
-	componentDidMount() {
-		document.body.addEventListener('keydown', this.handleKeyDown);
-	}
-
-	componentWillUnmount() {
-		document.body.removeEventListener('keydown', this.handleKeyDown);
-	}
-
 	handleKeyDown = (e) => {
 		if (e.keyCode === 27) {
 			this.props.closeModal();
@@ -21,8 +13,18 @@ class GalleryModal extends React.Component {
 		}
 	}
 
+	componentDidMount() {
+		window.addEventListener('keydown', this.handleKeyDown);
+	}
+
+	componentWillUnmount() {
+		window.removeEventListener('keydown', this.handleKeyDown);
+	}
+	
+
 	render () {
 		const {closeModal, findPrev, findNext, hasPrev, hasNext, source, bigImgAlt} = this.props;
+		const {handleKeyDown} = this;
 
 		if (!source) {
 			return null;
@@ -33,9 +35,9 @@ class GalleryModal extends React.Component {
 				<div className="modal-overlay" onClick={closeModal}></div>
 				<div className="modal">
 					<div className='modal-body'>
-						{hasPrev && <span className='modal-prev' onClick={findPrev} onKeyDown={this.handleKeyDown}></span>}
-						{hasNext && <span className='modal-next' onClick={findNext} onKeyDown={this.handleKeyDown}></span>}
-						<span className='modal-close' onClick={closeModal} onKeyDown={this.handleKeyDown}></span>
+						{hasPrev && <span className='modal-prev' onClick={findPrev} onKeyDown={handleKeyDown}></span>}
+						{hasNext && <span className='modal-next' onClick={findNext} onKeyDown={handleKeyDown}></span>}
+						<span className='modal-close' onClick={closeModal} onKeyDown={handleKeyDown}></span>
 						<img src={source} alt={bigImgAlt}/>
 					</div>
 				</div>

@@ -5,7 +5,6 @@ import Socials from '../../components/socials/Socials';
 import './Home.scss';
 
 const Home = () => {
-	
 	useScripts('js/chunk-app-drawing.js');
 	useScripts('js/app-drawing.js');
 
@@ -20,7 +19,7 @@ const Home = () => {
 				{/*############## CONTENT WITH PHOTO DRAWING ##############*/}
 				<div id="app"></div>
 		</div>
-	);
+	)
 }
 
 export default Home;

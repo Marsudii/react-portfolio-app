@@ -22,24 +22,6 @@ class About extends React.Component {
 	}
 
 	render() {
-		const aboutElements = dotsData.map((item) => {
-			return (
-				<div className={`about-item ${item.classItem}`} key={item.keyId}>
-					<div 
-						id={item.classItem} 
-						onMouseOver={this.addActiveClass}
-						className={`ball${this.state.active === item.classItem ? ' active' : ''}`}
-					></div>
-					<div className="show">
-						<p className="title">
-							{item.title}
-						</p>
-						<img className="line-drawing-pic" src={item.img} alt={item.title} />
-					</div>
-				</div>
-			)
-		});
-
 		return (
 			<div className="wrapper about-wrapper">
 				<h1 className="base-title">Me Starter Pack</h1>
@@ -47,7 +29,23 @@ class About extends React.Component {
 					<div className="img">
 						<img src={PhotoBg} alt="looking into the future"/>
 					</div>
-					{aboutElements}
+					{dotsData.map(({classItem, title, img}, i) => {
+						return (
+							<div className={`about-item ${classItem}`} key={i}>
+								<div 
+									id={classItem} 
+									onMouseOver={this.addActiveClass}
+									className={`ball${this.state.active === classItem ? ' active' : ''}`}
+								></div>
+								<div className="show">
+									<p className="title">
+										{title}
+									</p>
+									<img className="line-drawing-pic" src={img} alt={title} />
+								</div>
+							</div>
+						)
+					})}
 				</div>
 			</div>
 		)

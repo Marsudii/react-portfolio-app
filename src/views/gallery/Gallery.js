@@ -8,10 +8,11 @@ class Interests extends React.Component {
 		currentIndex: null
 	}
 
-	openModal = (e, index) => {
+	openModal = (e, i) => {
 		this.setState ({
-			currentIndex: index
+			currentIndex: i
 		});
+		
 	}
 
 	closeModal = () => {
@@ -34,8 +35,8 @@ class Interests extends React.Component {
 
 	render() {
 		const {currentIndex} = this.state;
-		const bigImg = galleryData.map(item => item.bigImg);
-		const bigImgAlt = galleryData.map(item => item.bigImgAlt);
+		const bigImg = galleryData.map(({bigImg}) => bigImg);
+		const bigImgAlt = galleryData.map(({bigImgAlt}) => bigImgAlt);
 
 		return (
 			<div className="wrapper wrapper-container">
@@ -43,10 +44,10 @@ class Interests extends React.Component {
 				<h2 className="gallery-subtitle">For inspiration and just for fun</h2>
 				<div className="gallery-container">
 					<div className="gallery-grid">
-						{galleryData.map((item, index) => {
+						{galleryData.map(({img, imgAlt}, i) => {
 							return (
-								<div onClick={(e) => this.openModal(e, index)} key={item.keyId}>
-									<img className="gallery-img" src={item.img} alt={item.imgAlt} />
+								<div onClick={(e) => this.openModal(e, i)} key={i}>
+									<img className="gallery-img" src={img} alt={imgAlt} />
 								</div>
 							)
 						})}

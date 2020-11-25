@@ -1,48 +1,58 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 import MediaQuery from 'react-responsive';
 import Socials from '../socials/Socials';
-
 import './Header.scss';
 
-function Header() {
-
-	const [ menuOpen, setMenuOpen ] = React.useState(false);
+const linksData = [
+	{
+		pageLink: 'about',
+		pageName: 'About Me'
+	},
+	{
+		pageLink: 'projects',
+		pageName: 'Projects'
+	},
+	{
+		pageLink: 'gallery',
+		pageName: 'Gallery'
+	}
+];
+const Header = () => {
+	const [menuOpen, setMenuOpen] = React.useState(false);
+	const navLinkItems = linksData.map(({pageLink, pageName}, i) => {
+		return (
+			<li className="nav-item" key={i}>
+				<NavLink className="nav-link" exact to={`${pageLink}`}>{pageName}</NavLink>
+			</li>
+		)
+	});
+	const LogoNavLink = () => {
+		return (
+			<div className="logo">
+				<NavLink className="logo-link" exact to="/">
+					<span className="tag-color">&lt;</span><span>Buhowski</span><span className="tag-color">/&gt;</span>
+				</NavLink>
+			</div>
+		)
+	};
 
 	return (
 		<header className={`header d-flex-c${menuOpen ? ' header-overflow' : ''}`}>
 			<div className="wrapper">
 				<MediaQuery minWidth={769}>
 					<div className="d-flex-c-b">
-						<div className="logo">
-							<NavLink className="logo-link" exact to="/">
-								<span className="tag-color">&lt;</span><span>Buhowski</span><span className="tag-color">/&gt;</span>
-							</NavLink>
-						</div>
+						<LogoNavLink />
 						<nav>
 							<ul className="nav d-flex-c">
-								<li className="nav-item">
-									<NavLink className="nav-link" to="/about">About Me</NavLink>
-								</li>
-								<li className="nav-item">
-									<NavLink className="nav-link" to="/projects">Projects</NavLink>
-								</li>
-								<li className="nav-item">
-									<NavLink className="nav-link" to="/gallery">Gallery</NavLink>
-								</li>
+								{navLinkItems}
 							</ul>
 						</nav>
 					</div>
 				</MediaQuery>
 				<MediaQuery maxWidth={768}>
-					<div className="logo">
-						<NavLink className="logo-link" exact to="/">
-							<span className="tag-color">&lt;</span><span>Buhowski</span><span className="tag-color">/&gt;</span>
-						</NavLink>
-					</div>
-					<div className='mobile-menu-btn' onClick={ () => {
-						setMenuOpen(o => !o);
-						} }>
+					<LogoNavLink />
+					<div className='mobile-menu-btn' onClick={() => {setMenuOpen(o => !o)}}>
 						<span></span>
 						<span></span>
 						<span></span>
@@ -54,15 +64,7 @@ function Header() {
 						<div>
 							<div>
 								<ul className="nav">
-									<li className="nav-item">
-										<NavLink className="nav-link" to="/about">About Me</NavLink>
-									</li>
-									<li className="nav-item">
-										<NavLink className="nav-link" to="/projects">Projects</NavLink>
-									</li>
-									<li className="nav-item">
-										<NavLink className="nav-link" to="/gallery">Gallery</NavLink>
-									</li>
+									{navLinkItems}
 								</ul>
 								<Socials />
 							</div>
@@ -71,7 +73,7 @@ function Header() {
 				</MediaQuery>
 			</div>
 		</header>
-	);
+	)
 }
 
 export default Header;

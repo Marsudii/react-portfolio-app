@@ -8,32 +8,27 @@ const dotsData = [
 	{
 		classItem: "brain",
 		title: "IDEA THINKER",
-		img: Brain,
-		keyId: 1
+		img: Brain
 	},
 	{
 		classItem: "writer",
 		title: "I like writing short screenplays and come up with new ideas",
-		img: Writer,
-		keyId: 2
+		img: Writer
 	},
 	{
 		classItem: "keyboard",
 		title: "Skills: HTML, CSS/SASS, JavaScript (Jquery/React), Gulp/Webpack, Git",
-		img: Keyboard,
-		keyId: 3
+		img: Keyboard
 	},
 	{
 		classItem: "backpack",
 		title: "Like to travel everywhere and go hiking",
-		img: Backpack,
-		keyId: 4
+		img: Backpack
 	},
 	{
 		classItem: "roots",
 		title: "BORN TO IMPROVE",
-		img: Roots,
-		keyId: 5
+		img: Roots
 	}
 ]
 

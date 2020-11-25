@@ -14,56 +14,47 @@ const projectsData = [
 	{
 		img: `url(${bgEnde})`,
 		url: 'https://www-somosende-com.vercel.app',
-		name: 'Somos ENDE',
-		keyId: 1
+		name: 'Somos ENDE'
 	},
 	{
 		img: `url(${BgDrinkHaus})`,
 		url: 'https://drink-haus.vercel.app',
-		name: 'Drink Haus',
-		keyId: 2
+		name: 'Drink Haus'
 	},
 	{
 		img: `url(${bgMensch})`,
 		url: 'https://mensch.vercel.app',
-		name: 'Mensch',
-		keyId: 3
+		name: 'Mensch'
 	},
 	{
 		img: `url(${BgSprey})`,
 		url: 'https://spraybox.vercel.app',
-		name: 'Spraybox Magazine',
-		keyId: 4
+		name: 'Spraybox Magazine'
 	},
 	{
 		img: `url(${BgNakashima})`,
 		url: 'https://nakashima-woods.vercel.app',
-		name: 'Nakashima Woodworkers',
-		keyId: 5
+		name: 'Nakashima Woodworkers'
 	},
 	{
 		img: `url(${BgFoundation})`,
 		url: 'https://tse-foundation-org.vercel.app',
-		name: 'TSE Foundation',
-		keyId: 6
+		name: 'TSE Foundation'
 	},
 	{
 		img: `url(${BgArchitect})`,
 		url: 'https://www-williamslester-com.vercel.app',
-		name: 'Architects',
-		keyId: 7
+		name: 'Architects'
 	},
 	{
 		img: `url(${BgBottleService})`,
 		url: 'https://www-youngspirits-co-uk.vercel.app',
-		name: 'Young Spirits',
-		keyId: 8
+		name: 'Young Spirits'
 	},
 	{
 		img: `url(${bgInfiniteFood})`,
 		url: 'https://infinityfoodsretail-coop.vercel.app',
-		name: 'Infinite Food',
-		keyId: 9
+		name: 'Infinite Food'
 	},
 	{
 		img: `url(${bgMeNotebooks})`,
@@ -74,8 +65,7 @@ const projectsData = [
 	{
 		img: `url(${bgPalms})`,
 		url: 'https://twobunchpalms-com.vercel.app',
-		name: 'Two Bunch Palms',
-		keyId: 11
+		name: 'Two Bunch Palms'
 	}
 ]
 
