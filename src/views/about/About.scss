@@ -38,6 +38,7 @@
 			letter-spacing: 2px;
 			line-height: normal;
 			width: 50%;
+			backface-visibility: hidden;
 			@include mobile {
 				font-size: 14px;
 			}

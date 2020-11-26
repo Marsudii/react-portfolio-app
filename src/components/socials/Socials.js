@@ -7,7 +7,7 @@ const Socials = () => {
 		<div className="contact-menu d-flex-c">
 			{socialData.map(({link, targetBlank, relSecure, title, iconClass}, i) => {
 				return (
-					<a href={link} target={targetBlank} rel={relSecure} key={i}>
+					<a className="d-flex-c-c" href={link} target={targetBlank} rel={relSecure} key={i}>
 						<span className="title">{title}</span>
 						<span className={iconClass}></span>
 					</a>
