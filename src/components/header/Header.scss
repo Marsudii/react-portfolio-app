@@ -11,7 +11,9 @@
 	height: 100px;
 }
 .logo-link.active,
-.nav-link.active {
+.nav-link.active,
+.page.slide-exit .nav-link, 
+.page.slide-exit .logo-link {
 	pointer-events: none;
 }
 .logo,

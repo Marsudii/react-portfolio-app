@@ -23,14 +23,14 @@ const Header = () => {
 	const navLinkItems = linksData.map(({pageLink, pageName}, i) => {
 		return (
 			<li className="nav-item" key={i}>
-				<NavLink className="nav-link" exact to={`${pageLink}`}>{pageName}</NavLink>
+				<NavLink className="nav-link" to={`${pageLink}`} exact>{pageName}</NavLink>
 			</li>
 		)
 	});
 	const LogoNavLink = () => {
 		return (
 			<div className="logo">
-				<NavLink className="logo-link" exact to="/">
+				<NavLink className="logo-link" to="/" exact>
 					<span className="tag-color">&lt;</span><span>Buhowski</span><span className="tag-color">/&gt;</span>
 				</NavLink>
 			</div>

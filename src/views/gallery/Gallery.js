@@ -12,7 +12,6 @@ class Interests extends React.Component {
 		this.setState ({
 			currentIndex: i
 		});
-		
 	}
 
 	closeModal = () => {

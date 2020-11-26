@@ -5,8 +5,8 @@ import './App.scss';
 import Header from '../components/header/Header';
 
 import Home from './home/Home';
-import Projects from './projects/Projects';
 import About from './about/About';
+import Projects from './projects/Projects';
 import Gallery from './gallery/Gallery';
 
 const routesData = [
@@ -16,16 +16,16 @@ const routesData = [
 	},
 	{
 		pathTo: 'about',
-		pageComponent: Projects
+		pageComponent: About
 	},
 	{
 		pathTo: 'projects',
-		pageComponent: About
+		pageComponent: Projects
 	},
 	{
 		pathTo: 'gallery',
 		pageComponent: Gallery
-	},
+	}
 ];
 
 const App = () => {
@@ -44,7 +44,7 @@ const App = () => {
 								<Switch location={location}>
 									{routesData.map(({pathTo, pageComponent}, i) => {
 										return (
-											<Route exact path={`/${pathTo}`} component={pageComponent} key={i}/>
+											<Route path={`/${pathTo}`} exact component={pageComponent} key={i}/>
 										)
 									})}
 								</Switch>
