@@ -18,9 +18,9 @@
 		color: $blue-main;
 		backface-visibility: hidden;
 		position: absolute;
-		top: -20px;
+		top: -25px;
 		left: 50%;
-		transform: translateX(-60%) rotate(-5deg);
+		transform: translateX(-35%) rotate(-4deg);
 		letter-spacing: 3px;
 		opacity: 0;
 		transition: all .4s ease;
@@ -28,6 +28,6 @@
 	}
 	a:hover > .title {
 		opacity: 1;
-		transform: translateX(-47%) rotate(10deg);
+		transform: translateX(-68%) rotate(-15deg);
 	}
 }

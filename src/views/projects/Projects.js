@@ -10,9 +10,9 @@ const Projects = () => {
 				<div className="projects-container">
 					{projectsData.map(({img, url, name}, i) => {
 						return (
-							<article className="project" style={{backgroundImage: img}} key={i}>
+							<article className="project d-flex-c" style={{backgroundImage: img}} key={i}>
 								<Link className="project-link" to={{pathname: url}} target="_blank" rel="noopener noreferrer">
-									<div className="project-container">
+									<div className="project-container d-flex">
 										<h3 className="project-name">{name}<span>_</span></h3>
 									</div>
 								</Link>

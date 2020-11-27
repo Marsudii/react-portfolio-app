@@ -42,7 +42,7 @@ body {
 	}
 }
 .base-title {
-	font-size: calc(32px + 28*(100vw - 320px)/1120);
+	font-size: calc(32px + 28 * (100vw - 320px) / 1120);
 	letter-spacing: 10px;
 	margin: 4rem 0;
 	font-family: $lg-bold;
@@ -71,4 +71,28 @@ body {
 }
 .d-flex {
 	display: flex;
+}
+.pos-abs {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.page.slide-enter .header,
+.page.slide-enter .about-item .ball {
+	z-index: 0;
+}
+.logo-link.active,
+.nav-link.active,
+.page.slide-exit .nav-link, 
+.page.slide-exit .logo-link {
+	pointer-events: none;
+}
+.logo,
+.nav-item,
+.mobile-menu-btn,
+.ball,
+.project {
+	cursor: pointer;
 }

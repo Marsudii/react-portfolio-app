@@ -1,5 +1,5 @@
 import React from "react";
-import GalleryModal from '../../components/GalleryModal';
+import GalleryModal from './GalleryModal';
 import galleryData from './galleryData';
 import './Gallery.scss';
 
@@ -45,7 +45,7 @@ class Interests extends React.Component {
 					<div className="gallery-grid">
 						{galleryData.map(({img, imgAlt}, i) => {
 							return (
-								<div onClick={(e) => this.openModal(e, i)} key={i}>
+								<div className="d-flex" onClick={(e) => this.openModal(e, i)} key={i}>
 									<img className="gallery-img" src={img} alt={imgAlt} />
 								</div>
 							)

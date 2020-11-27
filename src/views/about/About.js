@@ -31,11 +31,11 @@ class About extends React.Component {
 					</div>
 					{dotsData.map(({classItem, title, img}, i) => {
 						return (
-							<div className={`about-item ${classItem}`} key={i}>
+							<div className={`pos-abs about-item ${classItem}`} key={i}>
 								<div 
 									id={classItem} 
 									onMouseOver={this.addActiveClass}
-									className={`ball${this.state.active === classItem ? ' active' : ''}`}
+									className={`d-flex-c-c ball${this.state.active === classItem ? ' active' : ''}`}
 								></div>
 								<div className="show">
 									<p className="title">

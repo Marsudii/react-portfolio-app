@@ -1,5 +1,3 @@
-
-
 @import '../../styles/variables';
 
 .home-wrapper {
@@ -28,13 +26,17 @@
 		margin-bottom: 3rem;
 		font-family: $lg;
 		letter-spacing: 1.5px;
-		font-weight: normal;
 	}
 }
 
-// ######## PHOTO DRAWING STYLIZATION
-#app {
+#app,
+.photoContainer,
+.drawCanvas,
+.illustrationImage,
+canvas {
 	width: 100%;
+}
+#app {
 	margin: 0 auto;
 	overflow: hidden;
 	align-self: flex-end;
@@ -49,9 +51,6 @@
 		margin-top: 40px;
 	}
 }
-.photoContainer {
-	width: 100%;
-}
 .drawCanvas {
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -59,15 +58,12 @@
 	max-height: 785px;
 	padding-bottom: 80%;
 	position: relative;
-	width: 100%;
 	.illustrationImage {
 		display: none;
-		width: 100%
 	}
 	canvas {
 		position: absolute;
 		top: 0;
 		left: 0;
-		width: 100%
 	}
 }

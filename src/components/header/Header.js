@@ -22,14 +22,14 @@ const Header = () => {
 	const [menuOpen, setMenuOpen] = React.useState(false);
 	const navLinkItems = linksData.map(({pageLink, pageName}, i) => {
 		return (
-			<li className="nav-item" key={i}>
+			<li className="nav-item d-flex" key={i}>
 				<NavLink className="nav-link" to={`${pageLink}`} exact>{pageName}</NavLink>
 			</li>
 		)
 	});
 	const LogoNavLink = () => {
 		return (
-			<div className="logo">
+			<div className="logo d-flex">
 				<NavLink className="logo-link" to="/" exact>
 					<span className="tag-color">&lt;</span><span>Buhowski</span><span className="tag-color">/&gt;</span>
 				</NavLink>
@@ -60,8 +60,8 @@ const Header = () => {
 						<span></span>
 						<span></span>
 					</div>
-					<nav className={`mobile-menu${menuOpen ? ' open' : ''}`}>
-						<div>
+					<nav className={`pos-abs mobile-menu${menuOpen ? ' open' : ''}`}>
+						<div className="d-flex-c-c">
 							<div>
 								<ul className="nav">
 									{navLinkItems}

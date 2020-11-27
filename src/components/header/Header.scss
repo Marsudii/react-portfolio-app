@@ -1,26 +1,11 @@
 @import '../../styles/variables';
 
-.page.slide-enter {
-	.header {
-		z-index: 0;
-	}
-}
 .header {
 	position: relative;
 	z-index: 98;
 	height: 100px;
 }
-.logo-link.active,
-.nav-link.active,
-.page.slide-exit .nav-link, 
-.page.slide-exit .logo-link {
-	pointer-events: none;
-}
-.logo,
-.nav-item {
-	display: flex;
-	cursor: pointer;
-}
+
 .logo {
 	font-size: 21px;
 	letter-spacing: 3px;
@@ -47,7 +32,7 @@
 		bottom: 0;
 		width: 100%;
 		height: 2px;
-		background-color: #4758fc;
+		background-color: $blue-main;
 		z-index: -1;
 		transition: all .4s ease;
 	}
@@ -57,7 +42,6 @@
 	}
 }
 
-// ################## MOBILE MENU
 @include tabletSmall {
 	.header.header-overflow ~ .wrapper {
 		height: calc(100vh - 80px);
@@ -85,7 +69,6 @@
 			margin-left: auto;
 			transform: rotate(0deg);
 			transition: .5s ease-in-out;
-			cursor: pointer;
 			span {
 				display: block;
 				position: absolute;
@@ -152,11 +135,7 @@
 			}
 		}
 		.mobile-menu {
-			width: 100%;
 			height: 100vh;
-			position: absolute;
-			top: 0;
-			left: 0;
 			opacity: 0;
 			visibility: hidden;
 			overflow: hidden;
@@ -164,9 +143,6 @@
 				width: 100%;
 				height: 100%;
 				overflow-y: auto;
-				display: flex;
-				align-items: center;
-				justify-content: center;
 				padding-top: 40px;
 			}
 			.nav-item,
@@ -184,16 +160,16 @@
 					transition: all .3s;
 				}
 				.nav-item:first-child {
-					transition-delay: .55s;
+					transition-delay: .5s;
 				}
 				.nav-item:nth-child(2) {
-					transition-delay: .65s;
+					transition-delay: .6s;
 				}
 				.nav-item:last-child {
-					transition-delay: .75s;
+					transition-delay: .7s;
 				}
 				.contact-menu {
-					transition-delay: .85s;
+					transition-delay: .8s;
 				}
 				&::after,
 				&::before {
@@ -208,12 +184,12 @@
 					transform: translateZ(-1px);
 				}
 				&::before {
-					background: #4758fc;
+					background: $blue-main;
 					animation: menuAnim .6s ease;
 					
 				}
 				&::after {
-					background: #252525;
+					background: $bg-color;
 					animation: menuAnim .7s ease;
 				}
 			}

@@ -20,33 +20,32 @@
 	> div {
 		position: relative;
 		cursor: pointer;
-		display: flex;
 		height: 250px;
-		&::before, 
-		&::after {
+		&:before, 
+		&:after {
 			content: "";
 			position: absolute;
 			display: block;
-			transition: all .3s;
-			opacity: 0;
+			transition: .2s;
 		}
 		&:before {
-			@include whtl;
-			background: #000000;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
 		}
 		&:after {
 			left: 50%;
 			top: 50%;
 			transform: translate(-50%, -50%) scale(0);
-			opacity: 1;
 			background: url('./images/zoom.svg') no-repeat center / contain;
 			width: 70px;
 			height: 70px;
 		}
-		&:hover::before{
-			opacity: .8;
+		&:hover:before{
+			background:rgba(0, 0, 0, .8);
 		}
-		&:hover::after {
+		&:hover:after {
 			transform: translate(-50%, -50%) scale(1);
 		}
 	}
@@ -57,8 +56,6 @@
 }
 
 .gallery-modal {
-	position: absolute;
-	@include whtl;
 	z-index: 100;
 	background-color: rgba(0, 0, 0, .9);
 	padding: 40px;
@@ -66,8 +63,6 @@
 		padding: 10px;
 	}
 	.overlay {
-		position: absolute;
-		@include whtl;
 		z-index: -1;
 	}
 	img {
@@ -81,12 +76,12 @@
 		position: absolute;
 		top: 50%;
 		transform: translateY(-50%);
-		background: rgba(40, 40, 40, .6);
+		background: rgba(32, 32, 32, .5);
 		cursor: pointer;
 		border-radius: 50%;
 		height: 56px;
 		width: 56px;
-		&::after {
+		&:after {
 			content: '';
 			display: block;
 			position: absolute;
@@ -95,25 +90,25 @@
 			transform: translate(-55%, -50%) rotate(-45deg);
 			width: 9px;
 			height: 9px;
-			border: 3px $snow solid;
+			border: 3px solid $snow;
 			border-width: 0 3px 3px 0;
 		}
-		&:hover::after {
-			border-color: $blue-about;
+		&:hover:after {
+			border-color: $blue-main;
 		}
 	}
 	.modal-next {
 		right: 30px;
 		@include tablet {
-			right: 0;
+			right: 2px;
 		}
 	}
 	.modal-prev {
 		left: 30px;
 		@include tablet {
-			left: 0;
+			left: 2px;
 		}
-		&::after {
+		&:after {
 			transform: translate(-45%, -50%) rotate(135deg);
 		}
 	}

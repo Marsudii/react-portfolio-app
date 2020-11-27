@@ -31,8 +31,8 @@ class GalleryModal extends React.Component {
 		}
 
 		return (
-			<div className="gallery-modal d-flex-c-c" >
-				<div className="overlay" onClick={closeModal}></div>
+			<div className="gallery-modal d-flex-c-c pos-abs">
+				<div className="overlay pos-abs" onClick={closeModal}></div>
 				{hasPrev && <span className='modal-prev' onClick={findPrev} onKeyDown={handleKeyDown}></span>}
 				<img src={source} alt={bigImgAlt}/>
 				{hasNext && <span className='modal-next' onClick={findNext} onKeyDown={handleKeyDown}></span>}

@@ -9,22 +9,18 @@
 	}
 	@include tabletSmall {
 		grid-template-columns: repeat(1, 1fr);
-		grid-gap: 30px;
 	}
 }
 
 .project {
 	position: relative;
-	display: flex;
-	align-items: center;
 	justify-content: flex-end;
 	flex-direction: column;
 	height: 300px;
 	background-repeat: no-repeat;
-	outline: 1px solid transparent;
-	cursor: pointer;
 	background-size: cover;
 	background-position: center top;
+	outline: 1px solid transparent;
 	transition: all .3s ease;
 	transform-style: preserve-3d;
 	animation: bgPosition 3s cubic-bezier(.55,.1,.55,.9) alternate infinite;
@@ -55,7 +51,7 @@
 		transform: translate3d(10px,10px,-1px);
 	}
 	&::after {
-		background: linear-gradient(0deg,#202020 20%, transparent 80%);
+		background: linear-gradient(0deg, $dark 20%, transparent 80%);
 		background-position: 0 -20px;
 		background-size: 1px 508px;
 		opacity: 1;
@@ -77,17 +73,16 @@
 	transform: translateZ(3px);
 	width: 100%;
 	height: 100%;
-	display: flex;
 	align-items: flex-end;
 }
 
 .project-name {
 	position: relative;
 	font-size: 1.5rem;
+	line-height: 1.4;
 	letter-spacing: 3.2px;
 	padding-bottom: 1.5rem;
 	padding-left: 1rem;
-	line-height: 1.4;
 	span {
 		opacity: 0;
 	}
