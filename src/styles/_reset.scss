@@ -1,12 +1,13 @@
 html, body, div, span,
 h1, h2, h3, p, pre, ul, li,
-article, canvas, header, nav {
+article, canvas, header, nav, button, a {
 	margin: 0;
 	padding: 0;
 	border: 0;
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+	text-decoration: none;
 }
 * {
 	box-sizing: border-box;
@@ -15,17 +16,13 @@ article, canvas, header, nav {
 ul {
 	list-style: none;
 }
+button {
+	background: none;
+	cursor: pointer;
+}
 a:focus,
 a:active,
 a:hover,
 :focus {
 	outline: none;
-}
-a {
-	color: #fff;
-	padding: .75rem 1rem;
-	text-decoration: none;
-}
-img {
-	width: 100%;
 }

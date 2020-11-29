@@ -20,7 +20,6 @@ class GalleryModal extends React.Component {
 	componentWillUnmount() {
 		window.removeEventListener('keydown', this.handleKeyDown);
 	}
-	
 
 	render () {
 		const {closeModal, findPrev, findNext, hasPrev, hasNext, source, bigImgAlt} = this.props;

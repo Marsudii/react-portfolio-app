@@ -44,7 +44,7 @@
 		z-index: 5;
 		transition: all .1s;
 		border-radius: 50%;
-		&::after {
+		&:after {
 			content: '';
 			display: block;
 			width: 12px;

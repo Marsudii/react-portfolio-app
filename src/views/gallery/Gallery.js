@@ -5,7 +5,8 @@ import './Gallery.scss';
 
 class Interests extends React.Component {
 	state = {
-		currentIndex: null
+		currentIndex: null,
+		itemsToShow: 4
 	}
 
 	openModal = (e, i) => {
@@ -25,25 +26,35 @@ class Interests extends React.Component {
 			currentIndex: state.currentIndex - 1
 		}));
 	}
-	
+
 	findNext = () => {
 		this.setState(state => ({
 			currentIndex: state.currentIndex + 1
 		}));
 	}
 
+	showMore = () => {
+		if (this.state.itemsToShow < galleryData.length) {
+			this.setState(state => ({
+				itemsToShow: state.itemsToShow + 4
+			}));
+		} else {
+			return galleryData.length;
+		}
+	}
+
 	render() {
-		const {currentIndex} = this.state;
-		const bigImg = galleryData.map(({bigImg}) => bigImg);
-		const bigImgAlt = galleryData.map(({bigImgAlt}) => bigImgAlt);
+		const {currentIndex, itemsToShow} = this.state;
+		const bigImg = galleryData.slice(0, itemsToShow).map(({bigImg}) => bigImg);
+		const bigImgAlt = galleryData.slice(0, itemsToShow).map(({bigImgAlt}) => bigImgAlt);
 
 		return (
-			<div className="wrapper wrapper-container">
+			<div className="wrapper wrapper-container" >
 				<h1 className="base-title">Images</h1>
 				<h2 className="gallery-subtitle">For inspiration and just for fun</h2>
 				<div className="gallery-container">
 					<div className="gallery-grid">
-						{galleryData.map(({img, imgAlt}, i) => {
+						{galleryData.slice(0, itemsToShow).map(({img, imgAlt}, i) => {
 							return (
 								<div className="d-flex" onClick={(e) => this.openModal(e, i)} key={i}>
 									<img className="gallery-img" src={img} alt={imgAlt} />
@@ -51,6 +62,12 @@ class Interests extends React.Component {
 							)
 						})}
 					</div>
+					<button
+						className="a nav-link" 
+						style={{display: itemsToShow >= galleryData.length ? 'none' : 'block'}}
+						onClick={this.showMore}>
+							Show More
+					</button>
 					<GalleryModal
 						closeModal={this.closeModal}
 						findPrev={this.findPrev}

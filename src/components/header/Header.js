@@ -23,14 +23,14 @@ const Header = () => {
 	const navLinkItems = linksData.map(({pageLink, pageName}, i) => {
 		return (
 			<li className="nav-item d-flex" key={i}>
-				<NavLink className="nav-link" to={`${pageLink}`} exact>{pageName}</NavLink>
+				<NavLink className="a nav-link" to={`${pageLink}`} exact>{pageName}</NavLink>
 			</li>
 		)
 	});
 	const LogoNavLink = () => {
 		return (
 			<div className="logo d-flex">
-				<NavLink className="logo-link" to="/" exact>
+				<NavLink className="a logo-link" to="/" exact>
 					<span className="tag-color">&lt;</span><span>Buhowski</span><span className="tag-color">/&gt;</span>
 				</NavLink>
 			</div>

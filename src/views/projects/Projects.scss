@@ -31,8 +31,8 @@
 		box-shadow: 11px 8px 20px 0 rgba(0,0,0,.24);
 		animation: bgPosition 3s cubic-bezier(.55,.1,.55,.9) alternate infinite;
 	}
-	&::after, 
-	&::before {
+	&:after, 
+	&:before {
 		content: "";
 		position: absolute;
 		top: 0;
@@ -40,24 +40,24 @@
 		width: 100%;
 		height: 100%;
 	}
-	&::before {
+	&:before {
 		background: $blue-main;
 		z-index: -1;
 		transform: translateZ(-1px);
 		transform-origin: left bottom;
 		transition: all .3s ease .2s;
 	}
-	&:hover::before {
+	&:hover:before {
 		transform: translate3d(10px,10px,-1px);
 	}
-	&::after {
+	&:after {
 		background: linear-gradient(0deg, $dark 20%, transparent 80%);
 		background-position: 0 -20px;
 		background-size: 1px 508px;
 		opacity: 1;
 		transition: all .4s ease-out;
 	}
-	&:hover::after {
+	&:hover:after {
 		background-size: 1px 800px;
 		background-position: 0 -326px;
 		opacity: 1;

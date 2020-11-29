@@ -19,7 +19,7 @@
 	transition: .1s linear;
 	transition-delay: 1.056s;
 	}
-	&::after {
+	&:after {
 		content: '';
 		display: block;
 		background: $blue-main;
@@ -31,7 +31,7 @@
 		transform: translateX(-50%) translateZ(5px);
 		z-index: 100;
 	}
-	&.slide-enter::after {
+	&.slide-enter:after {
 		animation: transitionReload 1.6s ease;
 	}
 }

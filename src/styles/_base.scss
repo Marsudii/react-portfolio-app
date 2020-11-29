@@ -24,6 +24,13 @@ body {
 ::-webkit-scrollbar-thumb {
 	background: $blue-main;
 }
+.a {
+	color: #fff;
+	padding: .75rem 1rem;
+}
+img {
+	width: 100%;
+}
 .wrapper {
 	margin: 0 auto;
 	max-width: 1600px;

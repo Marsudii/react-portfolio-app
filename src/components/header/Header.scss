@@ -25,7 +25,7 @@
 	font-family: $lg-bold;
 	letter-spacing: 4px;
 	z-index: 1;
-	&::after {
+	&:after {
 		content: "";
 		position: absolute;
 		left: 0;
@@ -36,8 +36,8 @@
 		z-index: -1;
 		transition: all .4s ease;
 	}
-	&.active::after,
-	&:hover::after {
+	&.active:after,
+	&:hover:after {
 		height: 100%;
 	}
 }
@@ -171,8 +171,8 @@
 				.contact-menu {
 					transition-delay: .8s;
 				}
-				&::after,
-				&::before {
+				&:after,
+				&:before {
 					content: '';
 					display: block;
 					position: absolute;
@@ -183,12 +183,12 @@
 					z-index: -1;
 					transform: translateZ(-1px);
 				}
-				&::before {
+				&:before {
 					background: $blue-main;
 					animation: menuAnim .6s ease;
 					
 				}
-				&::after {
+				&:after {
 					background: $bg-color;
 					animation: menuAnim .7s ease;
 				}
@@ -202,10 +202,10 @@
 		.nav-link {
 			font-size: 21px;
 			padding: .75rem 1.5rem;
-			&::after {
+			&:after {
 				transform: scale(0);
 			}
-			&.active::after {
+			&.active:after {
 				transform: scale(1);
 			}
 		}
