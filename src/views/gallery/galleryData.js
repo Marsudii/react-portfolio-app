@@ -1,62 +1,66 @@
-import BurningMan from './images/burning-man.jpg';
-import Deer from './images/deer.jpg';
-import Tesla from './images/tesla-in-space.jpg';
-import Glass from './images/glass-of-truth.jpg';
-import LazyGlory from './images/lazy.jpg';
-import HiddenCat from './images/hidden-cat.jpg';
-import DogPineapple from './images/dog-pineapple.jpg';
+import bmS from './images/bm-s.jpg';
+import deerS from './images/deer-s.jpg';
+import fatherS from './images/father-s.jpg';
+import glassS from './images/glass-s.jpg';
+import lazyS from './images/lazy-s.jpg';
+import supperS from './images/supper-s.jpg';
+import swS from './images/sw-s.jpg';
+import teslaS from './images/tesla-s.jpg';
+import toiletS from './images/toilet-s.jpg';
 
-import BurningManBig from './images/burning-man-big.jpg';
-import DeerBig from './images/deer-big.jpg';
-import TeslaBig from './images/tesla-in-space-big.jpg';
-import GlassBig from './images/glass-of-truth-big.jpg';
-import LazyGloryBig from './images/lazy-big.jpg';
-import HiddenCatBig from './images/hidden-cat-big.jpg';
-import DogPineappleBig from './images/dog-pineapple-big.jpg';
+import bmB from './images/bm-l.jpg';
+import deerB from './images/deer-l.jpg';
+import fatherB from './images/father-l.jpg';
+import glassB from './images/glass-l.jpg';
+import lazyB from './images/lazy-l.jpg';
+import supperB from './images/supper-l.jpg';
+import swB from './images/sw-l.jpg';
+import teslaB from './images/tesla-l.jpg';
+import toiletB from './images/toilet-l.jpg';
 
-const galleryData = [
+
+export default [
 	{
-		img: BurningMan,
-		imgAlt: 'burning man',
-		bigImg: BurningManBig,
-		bigImgAlt: 'burning man big'
+		img: bmS,
+		bigImg: bmB
 	},
 	{
-		img: Glass,
-		imgAlt: 'Glass',
-		bigImg: GlassBig,
-		bigImgAlt: 'Glass big'
+		img: glassS,
+		bigImg: glassB
+	},
+
+	
+	{
+		img: toiletS,
+		bigImg: toiletB
 	},
 	{
-		img: DogPineapple,
-		imgAlt: 'Dog Pineapple',
-		bigImg: DogPineappleBig,
-		bigImgAlt: 'Dog Pineapple big'
+		img: supperS,
+		bigImg: supperB
 	},
 	{
-		img: HiddenCat,
-		imgAlt: 'hidden cat',
-		bigImg: HiddenCatBig,
-		bigImgAlt: 'hidden cat big'
+		img: teslaS,
+		bigImg: teslaB
 	},
 	{
-		img: Deer,
-		imgAlt: 'Deer',
-		bigImg: DeerBig,
-		bigImgAlt: 'Deer big'
+		img: swS,
+		bigImg: swB
 	},
 	{
-		img: Tesla,
-		imgAlt: 'tesla',
-		bigImg: TeslaBig,
-		bigImgAlt: 'tesla big'
+		img: fatherS,
+		bigImg: fatherB
 	},
 	{
-		img: LazyGlory,
-		imgAlt: 'Lazy Glory',
-		bigImg: LazyGloryBig,
-		bigImgAlt: 'Lazy Glory big'
+		img: deerS,
+		bigImg: deerB
 	},
+
+	{
+		img: lazyS,
+		bigImg: lazyB
+	},
+	
+	
+	
+	
 ]
-
-export default galleryData;

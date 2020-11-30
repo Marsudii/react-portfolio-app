@@ -17,7 +17,7 @@ const dotsData = [
 	},
 	{
 		classItem: "keyboard",
-		title: "Skills: HTML, CSS/SASS, JavaScript (Jquery/React), Gulp/Webpack, Git",
+		title: "Skills: HTML, CSS/SASS, JavaScript (React/React Native), Gulp/Webpack, Git",
 		img: Keyboard
 	},
 	{

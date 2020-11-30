@@ -1,36 +1,39 @@
 import React from "react";
-import GalleryModal from './GalleryModal';
 import galleryData from './galleryData';
+import GalleryModal from './GalleryModal';
 import './Gallery.scss';
 
 class Interests extends React.Component {
 	state = {
-		currentIndex: null,
-		itemsToShow: 4
+		itemsToShow: 4,
+		activeSlide: null,
+		touchDistance: 0
 	}
 
 	openModal = (e, i) => {
 		this.setState ({
-			currentIndex: i
+			activeSlide: i
 		});
 	}
 
 	closeModal = () => {
 		this.setState ({
-			currentIndex: null
+			activeSlide: null
 		});
 	}
 
-	findPrev = () => {
-		this.setState(state => ({
-			currentIndex: state.currentIndex - 1
-		}));
+	next = () => {
+		const slide = this.state.activeSlide + 1 < galleryData.slice(0, this.state.itemsToShow).length ? this.state.activeSlide + 1 : 0;
+		this.setState({
+			activeSlide: slide
+		});
 	}
 
-	findNext = () => {
-		this.setState(state => ({
-			currentIndex: state.currentIndex + 1
-		}));
+	prev = () => {
+		const slide = this.state.activeSlide - 1 < 0 ? galleryData.slice(0, this.state.itemsToShow).length - 1 : this.state.activeSlide - 1;
+		this.setState({
+			activeSlide: slide
+		})
 	}
 
 	showMore = () => {
@@ -44,9 +47,7 @@ class Interests extends React.Component {
 	}
 
 	render() {
-		const {currentIndex, itemsToShow} = this.state;
-		const bigImg = galleryData.slice(0, itemsToShow).map(({bigImg}) => bigImg);
-		const bigImgAlt = galleryData.slice(0, itemsToShow).map(({bigImgAlt}) => bigImgAlt);
+		const {itemsToShow, activeSlide} = this.state;
 
 		return (
 			<div className="wrapper wrapper-container" >
@@ -54,10 +55,10 @@ class Interests extends React.Component {
 				<h2 className="gallery-subtitle">For inspiration and just for fun</h2>
 				<div className="gallery-container">
 					<div className="gallery-grid">
-						{galleryData.slice(0, itemsToShow).map(({img, imgAlt}, i) => {
+						{galleryData.slice(0, itemsToShow).map(({img}, i) => {
 							return (
 								<div className="d-flex" onClick={(e) => this.openModal(e, i)} key={i}>
-									<img className="gallery-img" src={img} alt={imgAlt} />
+									<img className="gallery-img" src={img} alt={'picture ' + i} />
 								</div>
 							)
 						})}
@@ -68,14 +69,14 @@ class Interests extends React.Component {
 						onClick={this.showMore}>
 							Show More
 					</button>
-					<GalleryModal
+					<GalleryModal 
+						modalData={galleryData.slice(0, itemsToShow)}
+						activeSlide={activeSlide}
+						hasPrev={activeSlide > 0}
+						hasNext={activeSlide + 1 < galleryData.slice(0, itemsToShow).length}
+						prev={this.prev}
+						next={this.next}
 						closeModal={this.closeModal}
-						findPrev={this.findPrev}
-						findNext={this.findNext}
-						hasPrev={currentIndex > 0}
-						hasNext={currentIndex + 1 < bigImg.length}
-						source={bigImg[currentIndex]}
-						bigImgAlt={bigImgAlt[currentIndex]}
 					/>
 				</div>
 			</div>

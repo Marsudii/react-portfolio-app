@@ -5,7 +5,7 @@
 	.base-title {
 		margin-bottom: 0;
 		@include mobile {
-			margin-bottom: 15px;
+			margin-bottom: 30px;
 		}
 	}
 }
@@ -124,7 +124,7 @@
 			left: -14%;
 			transform: rotate(-9deg);
 			@include mobile {
-				top: -2%;
+				top: -5%;
 				left: -13%;
 				transform: rotate(-11deg);
 			}
