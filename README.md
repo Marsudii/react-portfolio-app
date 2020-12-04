@@ -1,1 +1,2 @@
-## React Portfolio
+## React Portfolio 
+(c) Alexander Tsiomakh
