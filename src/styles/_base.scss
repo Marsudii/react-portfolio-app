@@ -49,14 +49,18 @@ img {
 	}
 }
 .base-title {
-	font-size: calc(32px + 28 * (100vw - 320px) / 1120);
+	font-size: calc(24px + 2.5vw);
 	letter-spacing: 10px;
 	margin: 4rem 0;
 	font-family: $lg-bold;
 	line-height: normal;
+	@media screen and (max-width: 1366px) {
+		font-size: calc(24px + 1.6vw);
+	}
 	@include tabletSmall {
+		font-size: calc(24px + 2.5vw);
 		margin: 1.5rem 0 2rem;
-		letter-spacing: 5px;
+		letter-spacing: 6px;
 	}
 }
 .tag-color {
