@@ -1,2 +1,1 @@
-
-### My portfolio project using REACT
+## React Portfolio

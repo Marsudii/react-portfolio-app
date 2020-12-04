@@ -1,5 +1,5 @@
 import React from "react";
-import galleryData from './galleryData';
+import GalleryData from './galleryData';
 import GalleryModal from './GalleryModal';
 import './Gallery.scss';
 
@@ -23,26 +23,26 @@ class Interests extends React.Component {
 	}
 
 	next = () => {
-		const slide = this.state.activeSlide + 1 < galleryData.slice(0, this.state.itemsToShow).length ? this.state.activeSlide + 1 : 0;
+		const slide = this.state.activeSlide + 1 < GalleryData.slice(0, this.state.itemsToShow).length ? this.state.activeSlide + 1 : 0;
 		this.setState({
 			activeSlide: slide
 		});
 	}
 
 	prev = () => {
-		const slide = this.state.activeSlide - 1 < 0 ? galleryData.slice(0, this.state.itemsToShow).length - 1 : this.state.activeSlide - 1;
+		const slide = this.state.activeSlide - 1 < 0 ? GalleryData.slice(0, this.state.itemsToShow).length - 1 : this.state.activeSlide - 1;
 		this.setState({
 			activeSlide: slide
 		})
 	}
 
 	showMore = () => {
-		if (this.state.itemsToShow < galleryData.length) {
+		if (this.state.itemsToShow < GalleryData.length) {
 			this.setState(state => ({
 				itemsToShow: state.itemsToShow + 4
 			}));
 		} else {
-			return galleryData.length;
+			return GalleryData.length;
 		}
 	}
 
@@ -55,7 +55,7 @@ class Interests extends React.Component {
 				<h2 className="gallery-subtitle">For inspiration and just for fun</h2>
 				<div className="gallery-container">
 					<div className="gallery-grid">
-						{galleryData.slice(0, itemsToShow).map(({img}, i) => {
+						{GalleryData.slice(0, itemsToShow).map(({img}, i) => {
 							return (
 								<div className="d-flex" onClick={(e) => this.openModal(e, i)} key={i}>
 									<img className="gallery-img" src={img} alt={'picture ' + i} />
@@ -65,15 +65,15 @@ class Interests extends React.Component {
 					</div>
 					<button
 						className="a nav-link" 
-						style={{display: itemsToShow >= galleryData.length ? 'none' : 'block'}}
+						style={{display: itemsToShow >= GalleryData.length ? 'none' : 'block'}}
 						onClick={this.showMore}>
 							Show More
 					</button>
 					<GalleryModal 
-						modalData={galleryData.slice(0, itemsToShow)}
+						modalData={GalleryData.slice(0, itemsToShow)}
 						activeSlide={activeSlide}
 						hasPrev={activeSlide > 0}
-						hasNext={activeSlide + 1 < galleryData.slice(0, itemsToShow).length}
+						hasNext={activeSlide + 1 < GalleryData.slice(0, itemsToShow).length}
 						prev={this.prev}
 						next={this.next}
 						closeModal={this.closeModal}

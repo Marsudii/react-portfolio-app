@@ -18,8 +18,7 @@ import swB from './images/sw-l.jpg';
 import teslaB from './images/tesla-l.jpg';
 import toiletB from './images/toilet-l.jpg';
 
-
-export default [
+const GalleryData = [
 	{
 		img: bmS,
 		bigImg: bmB
@@ -28,8 +27,6 @@ export default [
 		img: glassS,
 		bigImg: glassB
 	},
-
-	
 	{
 		img: toiletS,
 		bigImg: toiletB
@@ -54,13 +51,10 @@ export default [
 		img: deerS,
 		bigImg: deerB
 	},
-
 	{
 		img: lazyS,
 		bigImg: lazyB
-	},
-	
-	
-	
-	
+	}	
 ]
+
+export default GalleryData;

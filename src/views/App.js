@@ -1,5 +1,5 @@
 import React from 'react';
-import {Route, BrowserRouter, Switch} from 'react-router-dom';
+import {Route, Switch} from 'react-router-dom';
 import {TransitionGroup, CSSTransition} from 'react-transition-group';
 import './App.scss';
 import Header from '../components/header/Header';
@@ -30,30 +30,28 @@ const routesData = [
 
 const App = () => {
 	return (
-		<BrowserRouter>
-			<Route render={({location}) => (
-				<TransitionGroup>
-					<CSSTransition 
-						key={location.key}
-						classNames="slide"
-						timeout={1700}
-					>
-						<div id="page" className="page">
-							<div className="page-container">
-								<Header />
-								<Switch location={location}>
-									{routesData.map(({pathTo, pageComponent}, i) => {
-										return (
-											<Route path={`/${pathTo}`} exact component={pageComponent} key={i}/>
-										)
-									})}
-								</Switch>
-							</div>
+		<Route render={({location}) => (
+			<TransitionGroup>
+				<CSSTransition 
+					key={location.key}
+					classNames="slide"
+					timeout={1700}
+				>
+					<div id="page" className="page">
+						<div className="page-container">
+							<Header />
+							<Switch location={location}>
+								{routesData.map(({pathTo, pageComponent}, i) => {
+									return (
+										<Route path={`/${pathTo}`} exact component={pageComponent} key={i}/>
+									)
+								})}
+							</Switch>
 						</div>
-					</CSSTransition>
-				</TransitionGroup>
-			)}/>
-		</BrowserRouter>
+					</div>
+				</CSSTransition>
+			</TransitionGroup>
+		)}/>
 	);
 }
 
