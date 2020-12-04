@@ -5,12 +5,12 @@
         <loc>https://buhowski.vercel.app/</loc>
     </url>
     <url>
-        <loc>https://buhowski.vercel.app/about</loc>
+        <loc>https://buhowski.vercel.app/about/</loc>
     </url>
     <url>
-        <loc>https://buhowski.vercel.app/projects</loc>
+        <loc>https://buhowski.vercel.app/projects/</loc>
     </url>
     <url>
-        <loc>https://buhowski.vercel.app/gallery</loc>
+        <loc>https://buhowski.vercel.app/gallery/</loc>
     </url>
 </urlset>

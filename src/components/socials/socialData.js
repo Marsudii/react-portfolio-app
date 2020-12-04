@@ -1,4 +1,4 @@
-import cvDoc from '../../assets/AlexanderTsiomakhCV.pdf';
+import cvDoc from '../../assets/cv.pdf';
 
 const socialData = [
 	{
