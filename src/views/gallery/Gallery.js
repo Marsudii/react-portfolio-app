@@ -67,7 +67,7 @@ class Interests extends React.Component {
 						className="a nav-link" 
 						style={{display: itemsToShow >= GalleryData.length ? 'none' : 'block'}}
 						onClick={this.showMore}>
-							Show More
+							See More
 					</button>
 					<GalleryModal 
 						modalData={GalleryData.slice(0, itemsToShow)}
