@@ -17,6 +17,7 @@ class GalleryModal extends React.Component {
 						<img className="slide-item" data-active={i === activeSlide} src={bigImg} alt={'picture ' + i} key={i}/>
 					)
 				})}
+				<span className='arrow modal-close' onClick={closeModal}></span>
 				{hasPrev && <span className='arrow modal-prev' onClick={prev}></span>}
 				{hasNext && <span className='arrow modal-next' onClick={next}></span>}
 			</div>

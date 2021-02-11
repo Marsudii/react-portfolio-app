@@ -104,7 +104,7 @@
 			position: absolute;
 			top: 50%;
 			left: 50%;
-			transform: translate(-55%, -50%) rotate(-45deg);
+			transform: translate(-50%, -50%) rotate(-45deg);
 			width: 9px;
 			height: 9px;
 			border: 3px solid $snow;
@@ -114,7 +114,31 @@
 			border-color: $blue-main;
 		}
 	}
-	.modal-next {
+	.modal-close {
+		top: 5px;
+		transform: none;
+		&:after {
+			left: 38%;
+		}
+		&:before {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 50%;
+			left: 40%;
+			transform: translate(50%, -50%) rotate(135deg);
+			width: 9px;
+			height: 9px;
+			border: 3px solid $snow;
+			border-width: 0 3px 3px 0;
+		}
+		&:hover:after,
+		&:hover:before {
+			border-color: $red;
+		}
+	}
+	.modal-next,
+	.modal-close {
 		right: 30px;
 		@include tablet {
 			right: 2px;
