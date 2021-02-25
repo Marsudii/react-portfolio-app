@@ -6,27 +6,28 @@ const socialData = [
 		targetBlank: '_blank',
 		relSecure: 'noopener noreferrer',
 		title: 'GitHub',
-		iconClass: 'icon-octopus'
-	},
-	{
-		link: 'tel:+380993129768',
-		title: 'Call',
-		iconClass: 'icon-phone'
+		iconClass: 'icon-octopus',
 	},
 	{
 		link: 'https://t.me/buhowski',
 		targetBlank: '_blank',
 		relSecure: 'noopener noreferrer',
 		title: 'Telegram',
-		iconClass: 'icon-plane'
+		iconClass: 'icon-plane',
+	},
+	{
+		link: 'https://www.linkedin.com/in/buhowski',
+		targetBlank: '_blank',
+		relSecure: 'noopener noreferrer',
+		title: 'LinkedIn',
+		iconClass: 'icon-in',
 	},
 	{
 		link: cvDoc,
 		targetBlank: '_blank',
 		title: 'CV',
-		iconClass: 'icon-cv'
-	}
-]
+		iconClass: 'icon-cv',
+	},
+];
 
 export default socialData;
-

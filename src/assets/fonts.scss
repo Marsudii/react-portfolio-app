@@ -56,8 +56,8 @@
 		url('fonts/icomoon.ttf') format('truetype'),
 		url('fonts/icomoon.svg#icomoon') format('svg');
 }
-[class^="icon-"],
-[class*=" icon-"] {
+[class^='icon-'],
+[class*=' icon-'] {
 	font-family: 'icomoon' !important;
 	display: block;
 	width: 20px;
@@ -68,17 +68,17 @@
 }
 
 .icon-cv:before {
-	content: "\e900";
+	content: '\e902';
 }
 
 .icon-octopus:before {
-	content: "\e901";
+	content: '\e900';
 }
 
-.icon-phone:before {
-	content: "\e902";
+.icon-in:before {
+	content: '\e901';
 }
 
 .icon-plane:before {
-	content: "\e903";
+	content: '\e903';
 }
