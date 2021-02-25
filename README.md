@@ -1,2 +1,1 @@
-## React Portfolio 
-(c) Alexander Tsiomakh
+## My Portfolio using React
